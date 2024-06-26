@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    background: rgb(255,243,226);
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/*header*/
+header {
+    background: rgb(255, 170, 128);
+    width: 520px;
+    height: 100vh;
+    position: fixed;
+}
+
+ header h1 {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 60px;
+} 
+/* *スマホ用 599px以下〜*/ 
+@media all and (max-width: 599px) {
+    header{display: none;
+    }
+}
+
+@media all and (max-width: 1024px) {
+  header{width: fit-content;}
+}
+
+nav ul {
+    padding-bottom: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    margin: 40px;
+    margin-left: 60;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+  }
+
+/*main*/
+main {
+    padding: 1rem;
+    flex-grow: 1;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 520px;
+    background: rgb(255,243,226);
+  }
+  
+section {
+    background: #FFF;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: 250px;
+    /* align-items: center; */
+}
+
+h2{
+      color:rgb(42, 87, 84)
+}
+
+.container{
+    
+    gap: 20px;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+  
+
+  .sec01 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .sec02 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .sec03 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  @media all and (max-width: 1024px) {
+    main{margin-left: 200px;}
+    section{margin-left: 0px;}
+  }
+
+  /*スマホ用 599px以下〜*/
+@media all and (max-width: 599px) {
+  main{margin-left: 0px;}
+  section{margin-left: 0px;}
+}
+
+  
+/*footer*/
+footer {
+    background: rgb(255, 255, 255);
+    color: rgb(66, 102, 100);
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
